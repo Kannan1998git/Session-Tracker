@@ -1,0 +1,65 @@
+.session-info {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  text-align: center;    
+    p{
+        margin:1rem 0.5rem;
+    }
+  }
+  
+  .actions {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h4{
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    cursor: pointer;
+    }
+  }
+  
+  button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  td, th {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.8);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  

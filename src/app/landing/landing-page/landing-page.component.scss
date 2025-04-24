@@ -1,0 +1,51 @@
+
+.animated-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff5f6d, #ffc371);
+    background-size: 100% 400%;
+    animation: gradientBG 10s ease infinite;
+    p{
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+    }
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .goto-btn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+
+  .goto-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    .goto-btn {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+    }
+  }

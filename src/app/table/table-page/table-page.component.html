@@ -1,0 +1,37 @@
+<div class="session-info">
+    <p><strong>Session Time:</strong> {{ sessionTime }}</p>
+    <p><strong>Active Time:</strong> {{ activeTime }}</p>
+  </div>
+  
+  <div class="actions">
+      <h4 (click)="goToLandingPage()"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg> &nbsp; Back</h4>
+    <button (click)="addRow()">Add</button>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td (click)="deleteRow(i)" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></td>
+      </tr>
+      <tr *ngIf="users.length == 0">
+        <td colspan="5">No data Found!</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Overlay for idle timeout -->
+  <div class="overlay" *ngIf="isIdle" (click)="resumeSession()">
+    <p>You’ve been idle. Click anywhere to continue.</p>
+  </div>
+  
